@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Sanjana K</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: var(--glass-border);
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            margin-bottom: 4rem;
+            position: relative;
+            width: 50%;
+            padding: 0 3rem;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -8px;
+        }
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -8px;
+        }
+        .timeline-content {
+            background: var(--surface-color);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+        .timeline-item:hover .timeline-content {
+            border-color: var(--accent-color);
+            transform: scale(1.02);
+        }
+        .timeline-date {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px;
+                padding-right: 0;
+                text-align: left !important;
+            }
+            .timeline-dot {
+                left: 22px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SANJANA<span>.K</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html" class="active">Education</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                </ul>
+            </nav>
+            <a href="mailto:contact@sanjanak.com" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Contact Me</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2 class="reveal" style="text-align: center;">My <span style="color: var(--accent-color);">Education</span> Journey</h2>
+                <div class="timeline">
+                    <!-- Education 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2020 - 2024</span>
+                            <h3>Bachelor of Technology</h3>
+                            <p style="color: var(--accent-color); margin-bottom: 0.5rem;">Major in Computer Science</p>
+                            <p style="font-size: 0.9rem;">Graduated with honors, focusing on web technologies and distributed systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education 2 -->
+                    <div class="timeline-item reveal" style="transition-delay: 0.1s;">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2018 - 2020</span>
+                            <h3>Higher Secondary Education</h3>
+                            <p style="color: var(--accent-color); margin-bottom: 0.5rem;">Science Stream</p>
+                            <p style="font-size: 0.9rem;">Achieved distinction in Mathematics and Physics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education 3 -->
+                    <div class="timeline-item reveal" style="transition-delay: 0.2s;">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2018</span>
+                            <h3>High School</h3>
+                            <p style="color: var(--accent-color); margin-bottom: 0.5rem;">St. Mary's School</p>
+                            <p style="font-size: 0.9rem;">Foundation of my academic journey with a focus on analytical skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:contact@sanjanak.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Sanjana K. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

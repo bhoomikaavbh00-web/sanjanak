@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Sanjana K</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+        }
+        .about-image img {
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            filter: grayscale(20%);
+            transition: var(--transition);
+        }
+        .about-image:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--accent-color);
+            border-radius: 20px;
+            z-index: -1;
+            transition: var(--transition);
+        }
+        .about-image:hover::before {
+            top: 15px;
+            left: 15px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .skill-item {
+            background: var(--surface-color);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+        .skill-item:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+        .skill-item i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SANJANA<span>.K</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                </ul>
+            </nav>
+            <a href="mailto:contact@sanjanak.com" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Contact Me</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image reveal">
+                        <img src="sanjanak.image.jpeg" alt="Sanjana K">
+                    </div>
+                    <div class="about-text">
+                        <h2 class="reveal">About <span style="color: var(--accent-color);">Me</span></h2>
+                        <p class="reveal" style="margin-top: 1.5rem;">Hello! I'm Sanjana K, a dedicated and creative professional with a passion for building elegant solutions to complex problems. My journey in the digital world began with a curiosity for how things work, which evolved into a career focused on user experience and design excellence.</p>
+                        <p class="reveal" style="margin-top: 1rem;">I believe that great design is not just about how something looks, but how it works. I strive to create interfaces that are intuitive, accessible, and beautiful.</p>
+                        
+                        <h3 class="reveal" style="margin-top: 3rem;">Technical <span style="color: var(--accent-color);">Skills</span></h3>
+                        <div class="skills-grid reveal">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:contact@sanjanak.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Sanjana K. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
